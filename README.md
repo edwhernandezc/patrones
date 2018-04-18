@@ -76,6 +76,58 @@ public class Creador extends CreadorAbstracto
     public void Creador() {
     }
 </code></pre>
+## Abstract Factory
+### Introducción
+Este patrón crea diferentes familias de objetos. Su objetivo principal es soportar múltiples estándares que vienen definidos por las diferentes jerarquías de herencia de objetos. Es similar al Factory Method, sólo que esta orientado a combinar productos. Se debe utilizar cuando Un sistema se debe configurar con una de entre varias familias de productos.
+
+![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/abstract-factory.jpg)
+
+AbstractFactory: declara una interfaz para la creación de objetos de productos abstractos.
+
+ConcreteFactory: implementa las operaciones para la creación de objetos de productos concretos.
+
+AbstractProduct: declara una interfaz para los objetos de un tipo de productos.
+
+ConcreteProduct: define un objeto de producto que la correspondiente factoría concreta se encargaría de crear, a la vez que implementa la interfaz de producto abstracto.
+
+Client: utiliza solamente las interfaces declaradas en la factoría y en los productos abstractos.
+Una única instancia de cada FactoryConcreto es creada en tiempo de ejecución. AbstractFactory delega la creación de productos a sus subclases FactoryConcreto.
+
+En el siguiente bloque de codigo podemos ver como se puede implementar el patron creacional Abstract Factory
+
+![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/color.png)
+
+![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/amarillo.png)
+
+## Builder
+### Introducción
+
+Permite la creación de un objeto complejo, a partir de una variedad de partes que contribuyen individualmente a la creación y ensamblación del objeto mencionado. Hace uso de la frase "divide y conquistarás". Por otro lado, centraliza el proceso de creación en un único punto, de tal forma que el mismo proceso de construcción pueda crear representaciones diferentes.
+
+Los objetos que dependen de un algoritmo tendrán que cambiar cuando el algoritmo cambia. Por lo tanto, los algoritmos que estén expuestos a dicho cambio deberían ser separados, permitiendo de esta manera reutilizar dichos algoritmos para crear diferentes representaciones.
+
+![GitHub Logo](https://informaticapc.com/patrones-de-diseno/images/builder.jpg)
+
+En el siguiente bloque de codigo podemos ver como se puede implementar el patron creacional Builer
+
+<pre><code>
+Vehiculo v = new Vehiculo();
+v.NumPuertas = 5;
+v.Matricula = "1034 CAA";
+v.Faros = new Faro[4];
+v.Faros[0] = new Faro(TipoFaro.Xenon);
+v.Faros[1] = new Faro(TipoFaro.Xenon);
+v.Faros[2] = new Faro(TipoFaro.Lexus);
+v.Faros[3] = new Faro(TipoFaro.Lexus);
+v.Color = "Rojo";
+v.Motor = new Motor(TipoMotor.Gasolina);
+v.Motor.Capacidad = 2200;
+v.Motor.Valvulas = 12;
+
+DirectorConstruccion director = new DirectorConstruccion (new ConstructorFordFiestaSportEdition());
+Vehiculo v = director.ConstruirVehiculo();
+
+</code></pre>
 
 # Patrones Estructurales
 ## Decorator
