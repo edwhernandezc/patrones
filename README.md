@@ -97,8 +97,7 @@ public abstract class Combo {
   public abstract int valor();
 
   }
-+
-+
+
 public class ComboBasico extends Combo{
 
   public ComboBasico() {
@@ -111,15 +110,13 @@ public class ComboBasico extends Combo{
     return 6200;
   }
 }
-+
-+
+
 public abstract class AdicionalesDecorator extends Combo{
   public abstract String getDescripcion();
   }
-+
-+
+
 public class Carne extends AdicionalesDecorator{
- Combo combo;
+  Combo combo;
 
   public Carne(Combo combo){
     this.combo=combo;
