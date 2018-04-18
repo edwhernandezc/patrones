@@ -5,7 +5,7 @@
 1. Edwin Hernández Cabrera - 20152020013
 
 ## Sinlgeton
-### Introducción 
+### Introducción
 Es un patrón de diseño que permite restringir la creación de objetos pertenecientes a una clase o el valor de un tipo a un único objeto. Su intención consiste en garantizar que una clase sólo tenga una instancia y proporcionar un punto de acceso global a ella. Lo utilizamos porque permite acceso controlado a la única instancia, puede tener un control estricto sobre cómo y cuándo acceden los clientes a la instancia, Debe haber exactamente una instancia de una clase, y debe ser accesible a los clientes desde un punto de acceso conocido.
 
 ![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/2.png)
@@ -33,7 +33,7 @@ Factory Method es un patrón de creación de objetos y normalmente se suele usar
 
 ![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/factory.jpg)
 
-En el siguiente bloque de codigo podemos ver como se puede implementar el patron creacional Factory Method 
+En el siguiente bloque de codigo podemos ver como se puede implementar el patron creacional Factory Method
 
 <pre><code>
 package FactoryMethod1;
@@ -60,7 +60,7 @@ public class ArchivoAudio implements IArchivo
 {
     public ArchivoAudio() {
     }
-// CREADOR, SEGUN UML//    
+// CREADOR, SEGUN UML//
     package FactoryMethod1;
  public abstract class CreadorAbstracto
 {
@@ -69,17 +69,17 @@ public class ArchivoAudio implements IArchivo
     // --------------------------------
      public abstract IArchivo crear(int tipo);
 }
-// CREADOR CONCRETO, SEGUN UML// 
+// CREADOR CONCRETO, SEGUN UML//
 package FactoryMethod1;
 public class Creador extends CreadorAbstracto
 {
     public void Creador() {
     }
 </code></pre>
- 
+
 # Patrones Estructurales
 ## Decorator
-### Introducción 
+### Introducción
 El patrón decorator permite añadir responsabilidades a objetos concretos de forma dinámica. Los decoradores ofrecen una alternativa más flexible que la herencia para extender las funcionalidades.
 ### Este patrón se debe utilizar cuando:
 Hay una necesidad de extender la funcionalidad de una clase, pero no hay razones para extenderlo a través de la herencia.
@@ -88,63 +88,67 @@ Se quiere agregar o quitar dinámicamente la funcionalidad de un objeto.
 ### Codigo
 <code>
 public abstract class Combo {
-  
- String descripcion = "";
-  
- public String getDescripcion() 
- {
-  return descripcion;
- }
- 
- public abstract int valor();
- 
-}
+
+  String descripcion = "";
+
+  public String getDescripcion() {
+    return descripcion;
+  }
+  public abstract int valor();
+
+  }
 +
 +
 public class ComboBasico extends Combo{
- 
- public ComboBasico() {
-  descripcion="Porcion de Papas Fritas, " +
-   "salsa, queso, amburgueza sencilla, gaseosa";
- }
-  
- @Override
- public int valor() {
-  return 6200;
- }
+
+  public ComboBasico() {
+    descripcion="Porcion de Papas Fritas, " +
+    "salsa, queso, amburgueza sencilla, gaseosa";
+  }
+
+  @Override
+  public int valor() {
+    return 6200;
+  }
 }
 +
 +
 public abstract class AdicionalesDecorator extends Combo{
- 
- public abstract String getDescripcion();
-}
+  public abstract String getDescripcion();
+  }
 +
 +
 public class Carne extends AdicionalesDecorator{
- 
  Combo combo;
-  
- public Carne(Combo combo)
- {
-  this.combo=combo; 
- }
-  
- @Override
- public String getDescripcion() {
-  return combo.getDescripcion()+" , Porcion de Carne";
- }
- 
- @Override
- public int valor() {
-  return 2500+combo.valor();
- }
+
+  public Carne(Combo combo){
+    this.combo=combo;
+  }
+
+  @Override
+  public String getDescripcion() {
+    return combo.getDescripcion()+" , Porcion de Carne";
+  }
+
+  @Override
+  public int valor() {
+    return 2500+combo.valor();
+  }
 }
 </code>
+##Adapter
+###Introducción
+Busca una manera estandarizada de adaptar un objeto a otro. Se utiliza para transformar una interfaz en otra, de tal modo que una clase que no pudiera utilizar la primera, haga uso de ella a través de la segunda.
+Es conocido como Wrapper (al patrón Decorator también se lo llama Wrapper, con lo cual es nombre Wrapper muchas veces se presta a confusión).
+Una clase Adapter implementa un interfaz que conoce a sus clientes y proporciona acceso a una instancia de una clase que no conoce a sus clientes, es decir convierte la interfaz de una clase en una interfaz que el cliente espera. Un objeto Adapter proporciona la funcionalidad prometida por un interfaz sin tener que conocer que clase es utilizada para implementar ese interfaz. Permite trabajar juntas a dos clases con interfaces incompatibles.
+###Este patrón se debe utilizar cuando
+* Se quiere utilizar una clase que llame a un método a través de una interface, pero se busca utilizarlo con una clase que no implementa ese interface.
+* Se busca determinar dinámicamente que métodos de otros objetos llama un objeto.
+* No se quiere que el objeto llamado tenga conocimientos de la otra clase de objetos.
+###Diagrama UML
+![Diagrama UML](https://lh6.googleusercontent.com/RIOjG1cnE_Sy_X-eW6Hvs5YeG7tbyDeon1Lc1p2Ujkzg6PzXFD2UMr2kVz18w_Uif12nJQ3WJt8nNqBHSkvjGh1KY28BTrH8s1g4mSNQbXeu3Xi4yw)
 ### Referencias
- http://migranitodejava.blogspot.com.co 
-
- https://informaticapc.com 
- 
+ http://migranitodejava.blogspot.com.co
+ https://informaticapc.com
  https://www.genbetadev.com/metodologias-de-programacion
  http://joedicastro.com/pages/markdown.html
