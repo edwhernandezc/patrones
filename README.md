@@ -86,54 +86,53 @@ Hay una necesidad de extender la funcionalidad de una clase, pero no hay razones
 Se quiere agregar o quitar dinámicamente la funcionalidad de un objeto.
 ![GitHub Logo](https://lh6.googleusercontent.com/vIoskk-tgi1crMhB0O-Cd3lQZwpYOEfs8_tPxCvTC5hK0yHjlIXHDIVLJa-gwRhoesr-BLI-nUhctVOn1FUAD6XWOVKtQNzUoZ8nayfwYarmy5JkpQ)
 ### Codigo
-<code>
-public abstract class Combo {
+<pre><code>
+  public abstract class Combo {
 
-  String descripcion = "";
+    String descripcion = "";
 
-  public String getDescripcion() {
-    return descripcion;
-  }
-  public abstract int valor();
+    public String getDescripcion() {
+      return descripcion;
+    }
+    public abstract int valor();
 
-  }
+    }
 
-public class ComboBasico extends Combo{
+  public class ComboBasico extends Combo{
 
-  public ComboBasico() {
-    descripcion="Porcion de Papas Fritas, " +
-    "salsa, queso, amburgueza sencilla, gaseosa";
-  }
+    public ComboBasico() {
+      descripcion="Porcion de Papas Fritas, " +
+      "salsa, queso, amburgueza sencilla, gaseosa";
+    }
 
-  @Override
-  public int valor() {
-    return 6200;
-  }
-}
-
-public abstract class AdicionalesDecorator extends Combo{
-  public abstract String getDescripcion();
+    @Override
+    public int valor() {
+      return 6200;
+    }
   }
 
-public class Carne extends AdicionalesDecorator{
-  Combo combo;
+  public abstract class AdicionalesDecorator extends Combo{
+    public abstract String getDescripcion();
+    }
 
-  public Carne(Combo combo){
-    this.combo=combo;
-  }
+  public class Carne extends AdicionalesDecorator{
+    Combo combo;
 
-  @Override
-  public String getDescripcion() {
-    return combo.getDescripcion()+" , Porcion de Carne";
-  }
+    public Carne(Combo combo){
+      this.combo=combo;
+    }
 
-  @Override
-  public int valor() {
-    return 2500+combo.valor();
+    @Override
+    public String getDescripcion() {
+      return combo.getDescripcion()+" , Porcion de Carne";
+    }
+
+    @Override
+    public int valor() {
+      return 2500+combo.valor();
+    }
   }
-}
-</code>
-</pre>
+</code></pre>
 ##Adapter
 ###Introducción
 Busca una manera estandarizada de adaptar un objeto a otro. Se utiliza para transformar una interfaz en otra, de tal modo que una clase que no pudiera utilizar la primera, haga uso de ella a través de la segunda.
