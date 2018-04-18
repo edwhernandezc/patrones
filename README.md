@@ -207,6 +207,16 @@ Este patrón quiere evitar el hecho de crear un gran número estados de objeto p
 ### Diagrama UML
 ![Diagrama UML](https://lh6.googleusercontent.com/U8FtCPlWF05eCqgwYsQuO4IPhNEbo2eD7-VD-Zpd-FcR7A9xO_rDVOg08QWkdM2tiO4T1p2CaQeTJfmehzwPoKfTAvX4bga8klpg9P2LxRlGuwLQu10)
 
+## Proxy
+### Introducción
+El patrón Proxy se utiliza como intermediario para acceder a un objeto, permitiendo controlar el acceso a él. Para ello obliga que las llamadas a un objeto ocurran indirectamente a través de un objeto proxy, que actúa como un sustituto del objeto original, delegando luego las llamadas a los métodos de los objetos respectivos.
+
+### Este patrón se debe utilizar cuando
+* Se necesita una referencia a un objeto más flexible o sofisticada que un puntero.
+
+### Diagrama UML
+![Diagrama UML](https://lh4.googleusercontent.com/1q6X3tSi8ElNeDq0plWcdF8AGrAoDmVCEZVMZ-MKs5yC_-HykIBXan3N0QM5FOKzuX8nUqX18g_3FKafZ4KIorjoQz9AzsZsCypQsahVQjJ30RlX6A)
+
 ### Referencias
  http://migranitodejava.blogspot.com.co
  https://informaticapc.com
