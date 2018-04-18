@@ -165,6 +165,21 @@ Cuando un objeto tiene unas implementaciones posibles, la manera habitual de imp
 ### Diagrama UML
 ![Diagrama UML](https://lh6.googleusercontent.com/0KHlNjYDLgZjoaW5VipnnOIBXECMh5OC_37Ct4HmvjAwz_ZdU9AxKSjDq5OY5N6ztQNW0XyaG_Uf3I-2uggyaLfB7p--v63kqK5YQs6DtqHhRfUwm9E)
 
+## Composite
+### Introducción
+El patrón Composite sirve para construir algoritmos u objetos complejos a partir de otros más simples y similares entre sí, gracias a la composición recursiva y a una estructura en forma de árbol. Dicho de otra forma, permite construir objetos complejos componiendo de forma recursiva objetos similares en una estructura de árbol. Esto simplifica el tratamiento de los objetos creados, ya que al poseer todos ellos una interfaz común, se tratan todos de la misma manera.
+
+Este patrón busca representar una jerarquía de objetos conocida como “parte-todo”, donde se sigue la teoría de que las "partes" forman el "todo", siempre teniendo en cuenta que cada "parte" puede tener otras "parte" dentro.
+
+### Este patrón se debe utilizar cuando
+* Se busca representar una jerarquía de objetos como “parte-todo”.
+* Se busca que el cliente puede ignorar la diferencia entre objetos primitivos y compuestos (para que pueda tratarlos de la misma manera).
+
+### Diagrama UML
+![Diagrama UML](https://1.bp.blogspot.com/-LYqFnV_rA-o/TeZnLi9Ow7I/AAAAAAAAJMc/Esp_EEepGM8/s1600/image00.jpg)
+
+
+
 ### Referencias
  http://migranitodejava.blogspot.com.co
  https://informaticapc.com
