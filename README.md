@@ -86,6 +86,7 @@ public class Creador extends CreadorAbstracto
 +Se quiere agregar o quitar dinámicamente la funcionalidad de un objeto.
 +![GitHub Logo](https://lh6.googleusercontent.com/vIoskk-tgi1crMhB0O-Cd3lQZwpYOEfs8_tPxCvTC5hK0yHjlIXHDIVLJa-gwRhoesr-BLI-nUhctVOn1FUAD6XWOVKtQNzUoZ8nayfwYarmy5JkpQ)
 ### Codigo
+<code>
 public abstract class Combo {
   
  String descripcion = "";
@@ -139,10 +140,11 @@ public class Carne extends AdicionalesDecorator{
   return 2500+combo.valor();
  }
 }
-
+</code>
 ### Referencias
  http://migranitodejava.blogspot.com.co 
 
  https://informaticapc.com 
  
  https://www.genbetadev.com/metodologias-de-programacion
+ http://joedicastro.com/pages/markdown.html
