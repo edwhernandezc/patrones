@@ -147,6 +147,24 @@ Una clase Adapter implementa un interfaz que conoce a sus clientes y proporciona
 ### Diagrama UML
 ![Diagrama UML](https://lh6.googleusercontent.com/RIOjG1cnE_Sy_X-eW6Hvs5YeG7tbyDeon1Lc1p2Ujkzg6PzXFD2UMr2kVz18w_Uif12nJQ3WJt8nNqBHSkvjGh1KY28BTrH8s1g4mSNQbXeu3Xi4yw)
 
+## Bridge
+### Introducción
+Desacopla una abstracción de su implementación, de manera que ambas puedan variar de forma independiente. ¿Que quiere decir exactamente esto? Una abstracción se refiere a un comportamiento que una clase debería implementar, ya sea porque esta obligada por una interface o una clase abstracta. Por otro lado, con implementación se refiere a colocarle lógica a dicha obligación.
+Con lo cual, este patrón permite modificar las implementaciones de una abstracción en tiempo de ejecución. Básicamente es una técnica usada en programación para desacoplar la interface de una clase de su implementación, de manera que ambas puedan ser modificadas independientemente sin necesidad de alterar por ello la otra.
+
+Cuando un objeto tiene unas implementaciones posibles, la manera habitual de implementación es el uso de herencias. Muchas veces la herencia se puede tornar inmanejable y, por otro lado, acopla el código cliente con una implementación concreta. Este patrón busca eliminar la inconveniencia de esta solución.
+
+### Este patrón se debe utilizar cuando
+
+* Se desea evitar un enlace permanente entre la abstracción y su implementación. Esto puede ser debido a que la implementación debe ser seleccionada o cambiada en tiempo de ejecución
+* Tanto las abstracciones como sus implementaciones deben ser extensibles por medio de subclases. En este caso, el patrón Bridge permite combinar abstracciones e implementaciones diferentes y extenderlas independientemente.
+* Tanto las abstracciones como sus implementaciones deben ser extensibles por medio de subclases. En este caso, el patrón Bridge permite combinar abstracciones e implementaciones diferentes y extenderlas independientemente.
+* Tanto las abstracciones como sus implementaciones deben ser extensibles por medio de subclases. En este caso, el patrón Bridge permite combinar abstracciones e implementaciones diferentes y extenderlas independientemente.
+* Permite simplificar jerarquías demasiado pobladas.
+
+### Diagrama UML
+![Diagrama UML](https://lh6.googleusercontent.com/0KHlNjYDLgZjoaW5VipnnOIBXECMh5OC_37Ct4HmvjAwz_ZdU9AxKSjDq5OY5N6ztQNW0XyaG_Uf3I-2uggyaLfB7p--v63kqK5YQs6DtqHhRfUwm9E)
+
 ### Referencias
  http://migranitodejava.blogspot.com.co
  https://informaticapc.com
