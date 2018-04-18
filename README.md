@@ -179,6 +179,19 @@ Este patrón busca representar una jerarquía de objetos conocida como “parte-
 ![Diagrama UML](https://1.bp.blogspot.com/-LYqFnV_rA-o/TeZnLi9Ow7I/AAAAAAAAJMc/Esp_EEepGM8/s1600/image00.jpg)
 
 
+## Facade
+### Introducción
+Busca simplificar el sistema, desde el punto de vista del cliente, proporcionando una interfaz unificada para un conjunto de subsistemas, definiendo una interfaz de nivel más alto. Esto hace que el sistema sea más fácil de usar.
+
+Este patrón busca reducir al mínimo la comunicación y dependencias entre subsistemas. Para ello, utilizaremos una fachada, simplificando la complejidad al cliente. El cliente debería acceder a un subsistema a través del Facade. De esta manera, se estructura un entorno de programación más sencillo, al menos desde el punto de vista del cliente (por ello se llama "fachada").
+
+### Este patrón se debe utilizar cuando
+* Se quiera proporcionar una interfaz sencilla para un subsistema complejo.
+* Se quiera desacoplar un subsistema de sus clientes y de otros subsistemas, haciéndolo más independiente y portable.
+* Se quiera dividir los sistemas en niveles: las fachadas serían el punto de entrada a cada nivel. Facade puede ser utilizado a nivel aplicación.
+
+### Diagrama UML
+![Diagrama UML](https://lh3.googleusercontent.com/zRSPCgsvEraePczqEnz812vs4Q1bIdsNfanLyuRMcOnPoguqR5Fn-cErEwr8K_Eh-LKjVzRfyiY2sCrqrhVZLoYjnVU6Kl_CXqkZsxGpOFgbXghuAXA)
 
 ### Referencias
  http://migranitodejava.blogspot.com.co
