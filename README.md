@@ -136,6 +136,7 @@ public class Carne extends AdicionalesDecorator{
   }
 }
 </code>
+</pre>
 ##Adapter
 ###Introducción
 Busca una manera estandarizada de adaptar un objeto a otro. Se utiliza para transformar una interfaz en otra, de tal modo que una clase que no pudiera utilizar la primera, haga uso de ella a través de la segunda.
@@ -147,6 +148,7 @@ Una clase Adapter implementa un interfaz que conoce a sus clientes y proporciona
 * No se quiere que el objeto llamado tenga conocimientos de la otra clase de objetos.
 ###Diagrama UML
 ![Diagrama UML](https://lh6.googleusercontent.com/RIOjG1cnE_Sy_X-eW6Hvs5YeG7tbyDeon1Lc1p2Ujkzg6PzXFD2UMr2kVz18w_Uif12nJQ3WJt8nNqBHSkvjGh1KY28BTrH8s1g4mSNQbXeu3Xi4yw)
+
 ### Referencias
  http://migranitodejava.blogspot.com.co
  https://informaticapc.com
