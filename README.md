@@ -193,6 +193,20 @@ Este patrón busca reducir al mínimo la comunicación y dependencias entre subs
 ### Diagrama UML
 ![Diagrama UML](https://lh3.googleusercontent.com/zRSPCgsvEraePczqEnz812vs4Q1bIdsNfanLyuRMcOnPoguqR5Fn-cErEwr8K_Eh-LKjVzRfyiY2sCrqrhVZLoYjnVU6Kl_CXqkZsxGpOFgbXghuAXA)
 
+
+## Flyweight
+### Introducción
+Busca eliminar o reducir la redundancia cuando tenemos gran cantidad de objetos que contienen información idéntica, además de lograr un equilibrio entre flexibilidad y rendimiento (uso de recursos).
+Este patrón quiere evitar el hecho de crear un gran número estados de objeto para representar a un sistema. Permite compartir estados para soportar un gran número de objetos pequeños aumentando la eficiencia en espacio.
+
+### Este patrón se debe utilizar cuando
+* Para eliminar o reducir la redundancia cuando se tiene gran cantidad de objetos que contienen la misma información.
+* Cuando la memoria es crítica para el rendimiento de la aplicación.
+* La aplicación no depende de la identidad de los objetos.
+
+### Diagrama UML
+![Diagrama UML](https://lh6.googleusercontent.com/U8FtCPlWF05eCqgwYsQuO4IPhNEbo2eD7-VD-Zpd-FcR7A9xO_rDVOg08QWkdM2tiO4T1p2CaQeTJfmehzwPoKfTAvX4bga8klpg9P2LxRlGuwLQu10)
+
 ### Referencias
  http://migranitodejava.blogspot.com.co
  https://informaticapc.com
